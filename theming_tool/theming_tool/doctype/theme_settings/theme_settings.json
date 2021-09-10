@@ -1,18 +1,38 @@
 {
+ "actions": [],
  "creation": "2020-10-20 19:34:32.873115",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "backgound_colors_section",
+  "navbar",
+  "header",
+  "content",
+  "side_bar",
+  "card",
+  "column_break_6",
+  "primary_button",
+  "secondary_button",
+  "image_and_video_section",
+  "image",
+  "video",
+  "column_break_9",
+  "enable_image_background",
+  "enable_video_background",
   "section_break_5",
+  "logo_width",
   "logo",
   "column_break_8",
   "font",
   "font_path",
   "section_break_6",
   "elements_colors",
+  "text_color_section",
+  "text_colors",
   "code_section",
-  "theme_scss"
+  "theme_scss",
+  "hide_login"
  ],
  "fields": [
   {
@@ -28,9 +48,11 @@
    "options": "SCSS"
   },
   {
+   "default": "0",
    "fieldname": "logo",
    "fieldtype": "Attach Image",
-   "label": "Logo"
+   "label": "Logo",
+   "options": "0"
   },
   {
    "fieldname": "font",
@@ -64,10 +86,108 @@
    "hidden": 1,
    "label": "Font Path",
    "read_only": 1
+  },
+  {
+   "fieldname": "text_color_section",
+   "fieldtype": "Section Break",
+   "label": "Text Color"
+  },
+  {
+   "fieldname": "text_colors",
+   "fieldtype": "Table",
+   "label": "Text Colors",
+   "options": "Element Color"
+  },
+  {
+   "fieldname": "backgound_colors_section",
+   "fieldtype": "Section Break",
+   "label": "Backgound Colors"
+  },
+  {
+   "fieldname": "navbar",
+   "fieldtype": "Color",
+   "label": "Navbar"
+  },
+  {
+   "fieldname": "header",
+   "fieldtype": "Color",
+   "label": "Header"
+  },
+  {
+   "fieldname": "content",
+   "fieldtype": "Color",
+   "label": "Content"
+  },
+  {
+   "fieldname": "side_bar",
+   "fieldtype": "Color",
+   "label": "Side Bar"
+  },
+  {
+   "fieldname": "image_and_video_section",
+   "fieldtype": "Section Break",
+   "label": "Image and Video"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
+  },
+  {
+   "fieldname": "video",
+   "fieldtype": "Attach Image",
+   "label": "Video"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_video_background",
+   "fieldtype": "Check",
+   "label": "Enable video background"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_image_background",
+   "fieldtype": "Check",
+   "label": "Enable Image Background"
+  },
+  {
+   "fieldname": "primary_button",
+   "fieldtype": "Color",
+   "label": "Primary Button"
+  },
+  {
+   "fieldname": "secondary_button",
+   "fieldtype": "Color",
+   "label": "Secondary Button"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "logo_width",
+   "fieldtype": "Data",
+   "label": "Logo Width"
+  },
+  {
+   "fieldname": "card",
+   "fieldtype": "Color",
+   "label": "Card"
+  },
+  {
+   "default": "0",
+   "fieldname": "hide_login",
+   "fieldtype": "Check",
+   "label": "Hide Login"
   }
  ],
  "issingle": 1,
- "modified": "2020-10-28 00:29:56.831235",
+ "links": [],
+ "modified": "2021-09-10 13:44:10.475190",
  "modified_by": "Administrator",
  "module": "Theming Tool",
  "name": "Theme Settings",
