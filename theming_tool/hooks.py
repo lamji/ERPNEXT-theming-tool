@@ -19,11 +19,11 @@ app_license = "MIT"
 app_include_css = "/assets/" + get_site_name() + "/theme/css/custom_theme.css"
 # include js, css files in header of desk.html
 # app_include_css = "/assets/theming_tool/css/theming_tool.css"
-# app_include_js = "/assets/theming_tool/js/theming_tool.js"
+app_include_js = "/assets/theming_tool/js/theming_tool.js"
 web_include_css = "/assets/" + get_site_name() + "/theme/css/custom_theme.css"
 # include js, css files in header of web template
 # web_include_css = "/assets/theming_tool/css/theming_tool.css"
-# web_include_js = "/assets/theming_tool/js/theming_tool.js"
+web_include_js = "/assets/theming_tool/js/theming_tool.js"
 
 # include js in page
 # page_js = {"page" : "public/js/file.js"}
