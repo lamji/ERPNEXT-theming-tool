@@ -4,7 +4,7 @@ var dirty = 0;
 var site_name = "";
 frappe.ui.form.on('Theme Settings', {
   refresh: function(frm) {
-    console.log(frappe.urllib.get_base_url() + frm.doc.site_logo)
+   
   },
   onload: function(frm){
     frappe.call({
@@ -26,16 +26,43 @@ frappe.ui.form.on('Theme Settings', {
     if (frm.is_dirty()) {
       dirty = 1;
     }
+    //Font
     if (frm.doc.font_path) {
       var file_name = frm.doc.font_path.substring(frm.doc.font_path.lastIndexOf('/') + 1);
       style = style + "@font-face {\nfont-family: CustomFont;\nsrc: url('/assets/" + site_name + "/theme/font/" + file_name + "') format('truetype');\n}\n";
       style = style + "body, h1, h2, h3, h4, h5, h6{\nfont-family: CustomFont !important;\n}\n"
     }
-    if (frm.doc.logo){
-      var image_name = frm.doc.logo.substring(frm.doc.logo.lastIndexOf('/') + 1);
-      style = style + (".banner" + " {\nbackground-image: url('/assets/" + site_name + "/theme/images/" + image_name + "') !important;\nheight: 100vh;\nbackground-repeat: no-repeat;\nbackground-size: contain;" + "\n}\n");
-      //style = style + "img.app-logo {\nwidth:"+frm.doc.logo_width + "px !important;\nheight: 0px !important;\npadding: 13px !important;\nbackground: url('/assets/" + site_name + "/theme/images/" + image_name + "');\nbackground-size: cover;\n}\n";
+    // Buttons
+    if(frm.doc.primary_button){
+      $('.btn-primary').css("background-color", frm.doc.primary_button);
+      style = style + (".btn-primary" + " {\nbackground-color : " + frm.doc.primary_button + "\n}\n");
     }
+    if(frm.doc.secondary_button){
+      $('.btn-secondary').css("background-color", frm.doc.secondary_button);
+      style = style + (".btn-secondary" + " {\nbackground-color : " + frm.doc.secondary_button + "\n}\n");
+    }
+    //Login Page
+    if(frm.doc.page_logo){
+      style = style + ".login-logo{\nwidth:100px !important;\nheight: 100px !important;\nbackground: url('" +frappe.urllib.get_base_url()+ frm.doc.page_logo  + "');\nbackground-size: cover;\nmargin: 0 auto;\n}\n";
+      
+    }
+    if(frm.doc.page_title){
+      style = style + (".title:after" + " {\ncontent : "+"'"+frm.doc.page_title+"'"+"\n}\n");
+    }
+    if(frm.doc.navbar_title){
+      style = style + (".navbar-brand span::after" + " {\ncontent : "+"'"+frm.doc.navbar_title+"'"+"\n}\n");
+    }
+    //Banner
+    if (frm.doc.logo){
+        style = style + (".banner" + " {\nbackground-image: url('" + frappe.urllib.get_base_url()+ frm.doc.logo + "') !important;\nheight: " + frm.doc.banner_height + "vh;\nbackground-repeat: no-repeat;\nbackground-size: contain;" + "\n}\n");
+    }
+    // Navbar logo
+    if(frm.doc.navbar_logo){
+      //var image_name_logo = frm.doc.navbar_logo.substring(frm.doc.navbar_logo.lastIndexOf('/') + 1);
+      //const image_url = "https://www.pccr.edu.ph/wp-content/uploads/2021/04/seal-RV-1.png"
+      style = style + "div.custom_logo {\nwidth:40px !important;\nheight: 40px !important;\nbackground: url('" +frappe.urllib.get_base_url()+ frm.doc.navbar_logo  + "');\nbackground-size: cover;\n}\n";
+    }
+    //Navabar background
     if(frm.doc.navbar){
       $('.navbar').css("background-color", frm.doc.navbar);
       style = style + (".navbar" + " {\nbackground-color : " + frm.doc.navbar + "\n}\n");
@@ -55,10 +82,6 @@ frappe.ui.form.on('Theme Settings', {
     if(frm.doc.card){
       $('.widget').css("background-color", frm.doc.card);
       style = style + (".widget" + " {\nbackground-color : " + frm.doc.card + "\n}\n");
-    }
-    if(frm.doc.site_logo){
-      const site_logo = frappe.urllib.get_base_url()+ frm.doc.site_logo
-      $('.navbar-home').css();
     }
     for (var i = 0; i < frm.doc.elements_colors.length; i++) {
       if (frm.doc.elements_colors.length > 0) {

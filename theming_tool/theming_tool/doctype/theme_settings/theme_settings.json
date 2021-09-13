@@ -15,20 +15,24 @@
   "primary_button",
   "secondary_button",
   "image_and_video_section",
+  "banner_height",
   "logo",
+  "navbar_logo",
   "column_break_9",
   "section_break_5",
   "column_break_8",
   "font",
-  "site_logo",
+  "login_page",
+  "navbar_title",
+  "page_title",
+  "page_logo",
   "font_path",
   "section_break_6",
   "elements_colors",
   "text_color_section",
   "text_colors",
   "code_section",
-  "theme_scss",
-  "hide_login"
+  "theme_scss"
  ],
  "fields": [
   {
@@ -46,7 +50,7 @@
   {
    "default": "0",
    "fieldname": "logo",
-   "fieldtype": "Attach Image",
+   "fieldtype": "Attach",
    "label": "Banner",
    "options": "0"
   },
@@ -148,20 +152,39 @@
    "label": "Card"
   },
   {
-   "default": "0",
-   "fieldname": "hide_login",
-   "fieldtype": "Check",
-   "label": "Hide Login"
+   "fieldname": "navbar_logo",
+   "fieldtype": "Attach Image",
+   "label": "NavBar Logo"
   },
   {
-   "fieldname": "site_logo",
+   "fieldname": "banner_height",
+   "fieldtype": "Data",
+   "label": "Banner Height (max 100vh)"
+  },
+  {
+   "fieldname": "login_page",
+   "fieldtype": "Section Break",
+   "label": "Login Page"
+  },
+  {
+   "fieldname": "page_logo",
    "fieldtype": "Attach Image",
-   "label": "Site Logo"
+   "label": "Page Logo"
+  },
+  {
+   "fieldname": "page_title",
+   "fieldtype": "Data",
+   "label": "Page Title"
+  },
+  {
+   "fieldname": "navbar_title",
+   "fieldtype": "Data",
+   "label": "NavBar Title"
   }
  ],
  "issingle": 1,
  "links": [],
- "modified": "2021-09-10 18:05:09.257135",
+ "modified": "2021-09-13 13:19:11.794363",
  "modified_by": "Administrator",
  "module": "Theming Tool",
  "name": "Theme Settings",

@@ -6,11 +6,11 @@ from theming_tool.theming_tool.doctype.theme_settings.theme_settings import get_
 
 app_name = "theming_tool"
 app_title = "Theming Tool"
-app_publisher = "Ahmed Al-Farran"
+app_publisher = "Modefied by: Jick Lampago, credit to Ahmed Al-Farran"
 app_description = "Theming tool for frappe"
 app_icon = "octicon octicon-file-directory"
 app_color = "grey"
-app_email = "afarran1992@gmail.com"
+app_email = "lampagojick%@gmail.com"
 app_license = "MIT"
 
 # Includes in <head>
@@ -22,7 +22,7 @@ app_include_css = "/assets/" + get_site_name() + "/theme/css/custom_theme.css"
 app_include_js = "/assets/theming_tool/js/theming_tool.js"
 web_include_css = "/assets/" + get_site_name() + "/theme/css/custom_theme.css"
 # include js, css files in header of web template
-# web_include_css = "/assets/theming_tool/css/theming_tool.css"
+web_include_css = "/assets/theming_tool/css/theming_tool.css"
 web_include_js = "/assets/theming_tool/js/theming_tool.js"
 
 # include js in page
