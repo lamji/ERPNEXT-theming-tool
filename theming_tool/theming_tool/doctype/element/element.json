@@ -1,5 +1,6 @@
 {
- "autoname": "field:element_name",
+ "actions": [],
+ "autoname": "format:{element_name}-{##}",
  "creation": "2020-10-20 19:31:08.409446",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -25,7 +26,8 @@
    "reqd": 1
   }
  ],
- "modified": "2020-10-25 16:12:45.436517",
+ "links": [],
+ "modified": "2021-11-02 10:56:29.996202",
  "modified_by": "Administrator",
  "module": "Theming Tool",
  "name": "Element",

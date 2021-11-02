@@ -89,6 +89,13 @@ frappe.ui.form.on('Theme Settings', {
         style = style + (frm.doc.elements_colors[i].class + " {\nbackground-color : " + frm.doc.elements_colors[i].color + " !important;" +  "\n}\n");
       }
     }
+    //Text color
+    for (var i = 0; i < frm.doc.text_colors.length; i++) {
+      if (frm.doc.text_colors.length > 0) {
+        $(frm.doc.text_colors[i].class).attr("style", `color: ${frm.doc.text_colors[i].color} !important`);
+        style = style + (frm.doc.text_colors[i].class + " {\ncolor : " + frm.doc.text_colors[i].color + " !important;" +  "\n}\n");
+      }
+    }
     frm.doc.theme_scss = style;
     frm.refresh_fields("theme_scss");
   },
