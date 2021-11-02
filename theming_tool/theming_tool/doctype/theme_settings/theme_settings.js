@@ -34,11 +34,11 @@ frappe.ui.form.on('Theme Settings', {
     }
     // Buttons
     if(frm.doc.primary_button){
-      $('.btn-primary').css("background-color", frm.doc.primary_button);
+      $('.btn-primary').attr("style", `background-color: ${frm.doc.primary_button} !important;`);
       style = style + (".btn-primary" + " {\nbackground-color : " + frm.doc.primary_button + "!important; " + "\n}\n");
     }
     if(frm.doc.secondary_button){
-      $('.btn-secondary').css("background-color", frm.doc.secondary_button);
+      $('.btn-secondary').attr("style", `background-color: ${frm.doc.secondary_button} !important;`);
       style = style + (".btn-secondary" + " {\nbackground-color : " + frm.doc.secondary_button + " !important; " + "\n}\n");
     }
     //Login Page
