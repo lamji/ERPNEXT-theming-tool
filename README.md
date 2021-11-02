@@ -5,6 +5,7 @@ Theming tool for frappe
 #### Installing
 ```
 $ bench set-config developer_mode 1
+$ bench set-config developer_mode 1
 $ bench get-app git@github.com:lamji/ERPNEXT-theming-tool.git
 $ bench --site erpnext install-app theming_tool
 ```
