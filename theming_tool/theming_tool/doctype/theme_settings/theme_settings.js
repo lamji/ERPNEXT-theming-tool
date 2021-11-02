@@ -35,11 +35,11 @@ frappe.ui.form.on('Theme Settings', {
     // Buttons
     if(frm.doc.primary_button){
       $('.btn-primary').css("background-color", frm.doc.primary_button);
-      style = style + (".btn-primary" + " {\nbackground-color : " + frm.doc.primary_button + "\n}\n");
+      style = style + (".btn-primary" + " {\nbackground-color : " + frm.doc.primary_button + "!important; " + "\n}\n");
     }
     if(frm.doc.secondary_button){
       $('.btn-secondary').css("background-color", frm.doc.secondary_button);
-      style = style + (".btn-secondary" + " {\nbackground-color : " + frm.doc.secondary_button + "\n}\n");
+      style = style + (".btn-secondary" + " {\nbackground-color : " + frm.doc.secondary_button + " !important; " + "\n}\n");
     }
     //Login Page
     if(frm.doc.page_logo){
@@ -86,7 +86,7 @@ frappe.ui.form.on('Theme Settings', {
     for (var i = 0; i < frm.doc.elements_colors.length; i++) {
       if (frm.doc.elements_colors.length > 0) {
         $(frm.doc.elements_colors[i].class).css("background-color", frm.doc.elements_colors[i].color);
-        style = style + (frm.doc.elements_colors[i].class + " {\nbackground-color : " + frm.doc.elements_colors[i].color + "\n}\n");
+        style = style + (frm.doc.elements_colors[i].class + " {\nbackground-color : " + frm.doc.elements_colors[i].color + " !important;" +  "\n}\n");
       }
     }
     frm.doc.theme_scss = style;
