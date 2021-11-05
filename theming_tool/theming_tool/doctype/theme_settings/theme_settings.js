@@ -85,8 +85,8 @@ frappe.ui.form.on('Theme Settings', {
     }
     for (var i = 0; i < frm.doc.elements_colors.length; i++) {
       if (frm.doc.elements_colors.length > 0) {
-        $(frm.doc.elements_colors[i].class).css("background-color", frm.doc.elements_colors[i].color);
-        style = style + (frm.doc.elements_colors[i].class + " {\nbackground-color : " + frm.doc.elements_colors[i].color + " !important;" +  "\n}\n");
+        $(frm.doc.elements_colors[i].class).css(frm.doc.elements_colors[i].property, frm.doc.elements_colors[i].value);
+        style = style + (frm.doc.elements_colors[i].class + " {\n" + frm.doc.elements_colors[i].property + ":" + frm.doc.elements_colors[i].value + " !important;" +  "\n}\n");
       }
     }
     //Text color

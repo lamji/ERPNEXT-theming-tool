@@ -9,23 +9,18 @@
   "navbar",
   "header",
   "content",
+  "column_break_6",
   "side_bar",
   "card",
-  "column_break_6",
   "primary_button",
   "secondary_button",
   "image_and_video_section",
-  "banner_height",
   "logo",
   "navbar_logo",
   "column_break_9",
   "section_break_5",
   "column_break_8",
   "font",
-  "login_page",
-  "navbar_title",
-  "page_title",
-  "page_logo",
   "font_path",
   "section_break_6",
   "elements_colors",
@@ -38,7 +33,7 @@
   {
    "fieldname": "elements_colors",
    "fieldtype": "Table",
-   "label": "Elements Colors",
+   "label": "Css",
    "options": "Element Color"
   },
   {
@@ -51,8 +46,8 @@
    "default": "0",
    "fieldname": "logo",
    "fieldtype": "Attach",
-   "label": "Banner",
-   "options": "0"
+   "hidden": 1,
+   "label": "Banner"
   },
   {
    "fieldname": "font",
@@ -126,7 +121,7 @@
   {
    "fieldname": "image_and_video_section",
    "fieldtype": "Section Break",
-   "label": "Banner Background"
+   "label": "Navbar"
   },
   {
    "fieldname": "column_break_9",
@@ -155,36 +150,11 @@
    "fieldname": "navbar_logo",
    "fieldtype": "Attach Image",
    "label": "NavBar Logo"
-  },
-  {
-   "fieldname": "banner_height",
-   "fieldtype": "Data",
-   "label": "Banner Height (max 100vh)"
-  },
-  {
-   "fieldname": "login_page",
-   "fieldtype": "Section Break",
-   "label": "Login Page"
-  },
-  {
-   "fieldname": "page_logo",
-   "fieldtype": "Attach Image",
-   "label": "Page Logo"
-  },
-  {
-   "fieldname": "page_title",
-   "fieldtype": "Data",
-   "label": "Page Title"
-  },
-  {
-   "fieldname": "navbar_title",
-   "fieldtype": "Data",
-   "label": "NavBar Title"
   }
  ],
  "issingle": 1,
  "links": [],
- "modified": "2021-09-13 13:19:11.794363",
+ "modified": "2021-11-05 13:33:19.279725",
  "modified_by": "Administrator",
  "module": "Theming Tool",
  "name": "Theme Settings",
