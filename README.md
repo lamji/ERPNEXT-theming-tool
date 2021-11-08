@@ -4,10 +4,12 @@ Theming tool for frappe
 
 #### Installing
 ```
-$ bench set-config developer_mode 1
+
 $ bench set-config developer_mode 1
 $ bench get-app git@github.com:lamji/ERPNEXT-theming-tool.git
 $ bench --site erpnext install-app theming_tool
+$ sudo chmod -R 777 /sites/assets/erpnext
+$ sudo /opt/bitnami/ctlscript.sh restart
 ```
 #### How To Use
 1- Create "Element" and insert it's "class" name example: Nav-bar class is ".navbar-default"
@@ -19,8 +21,3 @@ NOTE: here I just add "background-color" attribute I'm willing to add more in th
 
 4- GO and hit SAVE.
 
-FOR IMAGES & DISCUSSION GO TO THIS [LINK](https://discuss.erpnext.com/t/frappe-erpnext-theming-tool/67500).
-  
-#### License
-
-MIT
