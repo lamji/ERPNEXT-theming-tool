@@ -43,10 +43,8 @@
    "options": "SCSS"
   },
   {
-   "default": "0",
    "fieldname": "logo",
    "fieldtype": "Attach",
-   "hidden": 1,
    "label": "Banner"
   },
   {
@@ -154,7 +152,7 @@
  ],
  "issingle": 1,
  "links": [],
- "modified": "2021-11-05 13:33:19.279725",
+ "modified": "2021-11-17 07:58:04.989893",
  "modified_by": "Administrator",
  "module": "Theming Tool",
  "name": "Theme Settings",
